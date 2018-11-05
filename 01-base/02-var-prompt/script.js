@@ -11,6 +11,7 @@
 
 (function() {
 
-    // your code here
+	var person = prompt("Quel est votre doux nom?", "Harry Potter");
+	alert ("Bonjour, " + person);
 
 })();
