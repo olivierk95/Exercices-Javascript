@@ -13,7 +13,17 @@
 
     document.getElementById("run").addEventListener("click", function() {
 
-        // your code here
+        var numbers = [2,4,6,8,10,12,14,16,18,20];
+        var num = [];
+        var square = 0;
+
+        for(var i = 0 ; i<numbers.length ; i++) {
+        	square += Math.pow(numbers[i], 2);
+        	num.push(square);
+        	var square = 0;
+        };
+
+        alert(num);
 
     });
 
