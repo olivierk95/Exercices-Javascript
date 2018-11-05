@@ -11,6 +11,19 @@
 
 (function() {
 
-    // your code here
+    function questions() { 
+    	var age = prompt("Quel est votre âge?", "Votre âge en chiffre");
+    	var sexe = prompt("Quel est votre sexe?", "masculin ou féminin");
+    	var ville = prompt("D'où venez-vous?", "Votre ville");
+		var agree = confirm("Vous avez " + age + " ans, vous êtes de sexe " + sexe +" et vous venez de " + ville + ".");
+
+    	if (agree == true) {
+    		alert("Merci!");
+   		} else {
+    		questions();
+    	}
+    }
+
+    questions();
 
 })();
