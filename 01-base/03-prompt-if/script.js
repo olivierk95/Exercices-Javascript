@@ -11,6 +11,11 @@
 
 (function() {
 
-  // your code here
+  var answer = prompt("Voulez-vous un peu de gâteau?", "Oui");
+  if (answer == "Oui" || answer == "oui") {
+  	alert("Bravo!");
+  } else {
+  	alert("Du gâteau, ça ne se refuse pas !");
+  }
 
 })();
