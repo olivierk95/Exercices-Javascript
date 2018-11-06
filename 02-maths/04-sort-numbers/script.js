@@ -15,7 +15,13 @@
 
     document.getElementById("run").addEventListener("click", function() {
 
-        // your code here
+        var numbers = document.getElementById("numbers").value;
+
+        console.log(numbers);
+
+        numbers.sort();
+
+        alert(numbers);
 
     });
 
