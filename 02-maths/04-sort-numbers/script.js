@@ -17,11 +17,15 @@
 
         var numbers = document.getElementById("numbers").value;
 
-        console.log(numbers);
+		var numbers2 = numbers.split(", ");
+    
+        function compareNumbers(a, b) {
+  			return a - b;
+		};
 
-        numbers.sort();
+        numbers2.sort(compareNumbers);
 
-        alert(numbers);
+        alert(numbers2);
 
     });
 
