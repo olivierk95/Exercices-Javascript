@@ -11,6 +11,13 @@
 
 (function() {
 
-    // your code here
+    var click = document.getElementById("run");
+
+    click.addEventListener("click", () => {
+    	var red = Math.round(Math.random()*255);
+    	var green = Math.round(Math.random()*255);
+    	var blue = Math.round(Math.random()*255);
+    	document.querySelector("html").style.backgroundColor = "rgb("+red+","+green+","+blue+")";
+    });  
 
 })();
