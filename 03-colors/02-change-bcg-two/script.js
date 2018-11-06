@@ -11,6 +11,11 @@
 
 (function() {
 
-    // your code here
+	var selector = document.getElementById("run");
+
+  	selector.onclick = function() {
+  		var color = document.getElementById("color").value;
+  		document.querySelector("html").style.backgroundColor = color;
+  	};
 
 })();
