@@ -11,6 +11,20 @@
 
 (function() {
 
-    // your code here
+	var run =document.getElementById('run');
+
+	run.addEventListener("click", ()=> {
+	    var day = document.getElementById('dob-day').value;
+	    var month = document.getElementById('dob-month').value;
+	    var year = document.getElementById('dob-year').value;
+
+    	var birth = new Date(year+", "+month+", "+day);
+    	var now = new Date();
+    	var diff = new Date(now.getTime()-birth.getTime());
+
+    	var age = diff.getFullYear() - 1970;
+
+    	alert("Vous avez "+ age + " ans!");
+	});
 
 })();
