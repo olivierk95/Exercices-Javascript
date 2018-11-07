@@ -11,6 +11,30 @@
 
 (function() {
 
-    // your code here
+	run.addEventListener("click",()=> {
+
+		var year = document.getElementById("year").value;
+		var month = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+		var nyear = new Date(year, month, 1);
+		var run = document.getElementById("run");
+
+		month.forEach(function ())
+
+
+	
+
+		var day = getDay(5);
+		var date = getDate(13);
+		console.log(day);
+		console.log(date);
+
+
+
+	//alert(""+);
+
+	});
+
+
+    
 
 })();
