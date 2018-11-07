@@ -12,7 +12,10 @@
 (function() {
 
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
+	
+	var now = new Date();
+	var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
-    // your code here
+	document.getElementById("target").innerHTML = now.toLocaleTimeString("fr-FR", options);
 
 })();
