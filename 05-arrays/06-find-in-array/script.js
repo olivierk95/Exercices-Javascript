@@ -89,6 +89,16 @@
         },
     ];
 
-    // your code here
+    var run = document.getElementById("run");
+
+    run.addEventListener("click", () => {
+        people.map(function (item) { 
+            if (item.firstname == "Jean" && item.lastname == "Dupont") {
+                console.log(item.email);
+                console.log(people.indexOf(item));
+            } else {
+            };
+        });
+    });
 
 })();
