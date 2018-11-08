@@ -11,6 +11,22 @@
 
 (function() {
 
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+    	var numbers = [];
+    	var sum = 0;
+
+    	for (var i=1; i<11; i++) {
+    		document.getElementById("n-"+i).innerHTML = parseInt((Math.random() * 100) +1);
+
+    		numbers.push(document.getElementById("n-"+i).innerHTML);
+
+    		sum += parseInt(document.getElementById("n-"+i).innerHTML);
+    	};
+
+    	document.getElementById("min").innerHTML = Math.min(...numbers);
+		document.getElementById("max").innerHTML = Math.max(...numbers);
+		document.getElementById("sum").innerHTML = sum;
+		document.getElementById("average").innerHTML = sum/10;
+    });
 
 })();
