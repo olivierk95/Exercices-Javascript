@@ -39,6 +39,12 @@
         },
     ];
 
-    // your code here
+    var run = document.getElementById("run");
+
+    run.addEventListener("click", () => {
+        people.map(function (item) {
+            console.log([item.firstname, item.lastname].join(" "));
+        });
+    });
 
 })();
