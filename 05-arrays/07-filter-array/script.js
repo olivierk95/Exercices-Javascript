@@ -89,6 +89,17 @@
         },
     ];
 
-    // your code here
+    var run = document.getElementById("run");
+    var youngPeople = [];
+
+    run.addEventListener("click", () => {
+        people.map(function(item) {
+            if (item.age < 18) {
+                youngPeople.push(item);
+            } else {
+            }
+        });
+        console.log(youngPeople);
+    });
 
 })();
