@@ -28,6 +28,13 @@
         "cerise",
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", () => {
+
+        function unique(elementToInspect, index, array) {
+            return array.indexOf(elementToInspect) === index;
+        };
+
+        console.log(fruits.filter(unique));
+    });
 
 })();
