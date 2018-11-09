@@ -11,6 +11,26 @@
 
 (function() {
 
-    // your code here
+    //créer la table 
+    var tbl = document.createElement("table");
+
+    //créer toutes les cellules (lignes(row) et colonnes(column))
+    for (var i = 0; i < 10; i++) {
+
+    	var row = document.createElement("tr");
+
+    	for (var j = 0; j < 10; j++) {
+
+    		var cell = document.createElement("td");
+    		var texte = document.createTextNode((i+1)*(j+1));
+    		cell.appendChild(texte);
+    		row.appendChild(cell);
+
+    	};
+
+    	tbl.appendChild(row);
+    };
+
+    document.querySelector("#target").appendChild(tbl);
 
 })();
