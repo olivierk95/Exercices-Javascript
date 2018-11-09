@@ -19,6 +19,34 @@
         "../../_shared/img/map.svg",
     ];
 
-    // your code here
+    var i = 1
+
+	document.querySelector("#next").addEventListener("click", ()=> {
+		if (i<gallery.length) {
+    		document.querySelector("img").src = gallery[i];
+    		i = i + 1;
+    	} else {
+    		i = 0;
+    		document.querySelector("img").src = gallery[i];
+    		i = i + 1;
+    	};
+
+    });
+
+    //autre solution:
+
+    /*var i = 0, c = gallery.length - 1;
+
+    document.getElementById('next').addEventListener('click', function() {
+    
+        if (i < c) {
+            i++
+        } else {
+            i = 0
+        }
+
+        document.getElementsByTagName('img')[0].src = gallery[i];
+
+    });*/
 
 })();
