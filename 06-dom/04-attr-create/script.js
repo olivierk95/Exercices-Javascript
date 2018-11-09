@@ -11,6 +11,10 @@
 
 (function() {
 
-    // your code here
+    var attribute = document.querySelector("#source").getAttribute("data-image");
+
+    document.querySelector("#target").innerHTML = "<img src="+attribute+" alt=img />";
+
+    document.querySelector("#source").removeAttribute("data-image");
 
 })();
