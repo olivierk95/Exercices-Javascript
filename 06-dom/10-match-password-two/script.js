@@ -11,6 +11,17 @@
 
 (function() {
 
-    // your code here
+    document.querySelector("#run").addEventListener("click", () => {
+
+    	var passOne = document.querySelector("#pass-one").value;
+    	var passTwo = document.querySelector("#pass-two").value;
+
+    	if (passOne !== passTwo) {
+    		document.querySelector("#pass-one").classList.add("error");
+    		document.querySelector("#pass-two").classList.add("error");
+    	} else {
+    		alert("Mot-de-passe correct!");
+    	}
+    });
 
 })();
