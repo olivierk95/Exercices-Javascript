@@ -11,6 +11,16 @@
 
 (function() {
 
-    // your code here
+    document.querySelector("#pass-one").addEventListener("input", () => {
+
+    	var password = document.querySelector("#pass-one").value;
+
+    	document.querySelector("#counter").innerHTML = password.length + "/10";
+
+    	document.querySelector("#pass-one").maxLength = 10;
+
+
+    });
+
 
 })();
