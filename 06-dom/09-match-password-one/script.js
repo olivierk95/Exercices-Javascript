@@ -11,6 +11,18 @@
 
 (function() {
 
-    // your code here
+    document.querySelector("#run").addEventListener("click", () => {
+
+    	var passOne = document.getElementById("pass-one").value;
+		var passTwo = document.getElementById("pass-two").value;
+
+    	if (passOne != passTwo) {
+    		document.querySelector("#pass-one").style.borderColor = "red";
+    		document.querySelector("#pass-two").style.borderColor = "red";
+    	} else {
+    		alert("Votre mot de passe est correct!");
+    	};
+
+    });
 
 })();
