@@ -11,6 +11,14 @@
 
 (function() {
 
-    // your code here
+    var text = document.querySelector("#target").innerHTML;
+    
+    var part = text.split("!");
+
+    for (var i = 0 ; i<part.length ; i++) {
+    	var character(i) = part[i].split(""); 
+    	console.log(character(2));  	
+    }
+
 
 })();

@@ -11,30 +11,21 @@
 
 (function() {
 
-	run.addEventListener("click",()=> {
+	document.getElementById("run").addEventListener("click",()=> {
 
 		var year = document.getElementById("year").value;
-		var month = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-		var nyear = new Date(year, month, 1);
-		var run = document.getElementById("run");
+		var friday13 = [];
 
-		month.forEach(function ())
+		for (var month =0 ; month<12 ; month++) {
+			var nyear = new Date(year, month, 13);
+			if (nyear.getDay()==5) {
+				friday13.push(month);
+				console.log(nyear)
+			};
+		};
 
-
-	
-
-		var day = getDay(5);
-		var date = getDate(13);
-		console.log(day);
-		console.log(date);
-
-
-
-	//alert(""+);
+		alert(friday13);
 
 	});
-
-
-    
 
 })();
