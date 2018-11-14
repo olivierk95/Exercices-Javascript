@@ -11,6 +11,12 @@
 
 (function() {
 
-    // your code here
+	var slider = document.querySelector("#slider");
+
+	var output = document.querySelector("#target");
+
+    slider.addEventListener("mousemove", ()=> {
+    	output.innerHTML = "+"+slider.value;
+    })
 
 })();
