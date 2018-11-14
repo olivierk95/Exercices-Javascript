@@ -11,14 +11,34 @@
 
 (function() {
 
-    var text = document.querySelector("#target").innerHTML;
-    
-    var part = text.split("!");
+    var text = document.querySelector("#target").innerHTML;   
+    var character = text.split(""); //tous les caractères sont mis dans un tableau
 
-    for (var i = 0 ; i<part.length ; i++) {
-    	var character(i) = part[i].split(""); 
-    	console.log(character(2));  	
-    }
+    var timeline = new TimelineMax({
+        repeat : 1,
+        repeatDelay : 0.4,
+        yoyo : true
+    });
+ 
+    text.html("");
+ 
+    $.each(character, function(index, val) {
+        if (val == " ") {
+            val = " ";
+        }
+        var letter = $("", {
+            id : "txt" + index
+        }).html(val).appendTo(text);
+        timeline.to(letter, 1, {
+            rotationY : 360,
+            rotationX : 360,
+            textShadow : "0px 0px 0px white",
+            color : "none",
+            autoAlpha : 1,
+            ease : Back.easeOut,
+            transformOrigin : "50% 50% -20"
+        }, index * 0.05);
+    });
 
 
 })();

@@ -11,6 +11,16 @@
 
 (function() {
 
-    // your code here
+	var compteur = localStorage.getItem("counter");
+
+	document.querySelector("#target").innerHTML = compteur;
+
+    document.querySelector("#increment").addEventListener("click", () => {
+
+    	var compteur = parseInt(document.querySelector("#target").innerHTML)+1;
+    	document.querySelector("#target").innerHTML = compteur;
+
+    	localStorage.setItem("counter", compteur);
+    });
 
 })();
