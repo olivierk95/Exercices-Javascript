@@ -11,6 +11,19 @@
 
 (function() {
 
-    // your code here
+    var text = document.querySelector("#target").innerHTML;
+    document.querySelector("#target").innerHTML = "";
+    var letterArray = text.split("");
+    var i = 0;
+
+    function typing (item){
+        if (i < text.length) {
+            document.querySelector("#target").innerHTML += letterArray[i];
+            i++;
+            setTimeout(typing, ((Math.random())*(400-10)));
+        };
+    }
+
+    typing();
 
 })();
